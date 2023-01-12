@@ -14,7 +14,7 @@ const printlist = (tasklist) => {
     var taskll = "<table>"
     for (i = 0; i < tasklist.length; i++) {
         var num = i + 1
-        taskll = taskll + '<tr><td>' + num + '. </td><td>' + tasklist[i] + '</td><td><button type="button" id="deletebtn" value="' + tasklist[i] + '" onclick="deleteTask(this.value)">delete</button></tr>'
+        taskll = taskll + '<tr class="tablerow"><td class="tabledata">' + num + '. </td><td class="tabledata tasklist-data">' + tasklist[i] + '</td><td class="tabledata"><button type="button" class="deletebutton" id="deletebtn" value="' + tasklist[i] + '" onclick="deleteTask(this.value)"><img src="./assets/static/deleteicon.ico" width="20" height="20"></button></tr>'
     }
     taskll = taskll + "</table>"
     document.getElementById("tasklist").innerHTML = taskll
@@ -40,7 +40,12 @@ window.addEventListener('load', function () {
 //Add Task
 const addtaskbtn = document.getElementById("addtaskbtn")
 const fetchdatafromform = () => {
-    return document.getElementById("task").value
+    var task = document.getElementById("task").value
+    if (task.length<1){
+        document.getElementById("response").innerHTML = "Please enter the task first."
+    }else{
+        return task
+    }
 }
 addtaskbtn.onclick = function() {
     addTask(fetchdatafromform())

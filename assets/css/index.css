@@ -46,15 +46,20 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5rem 5rem;
 }
 .left-header{
     width: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem 2rem;
 }
-h1{
+.app-logo{
     margin: 0rem 0rem;
+    font-family: url("../static/Lobster-Regular.ttf");
+    font-style: italic;
+    font-size: 4rem;
 }
 .left-body{
     height: 10rem;
@@ -63,8 +68,42 @@ h1{
     flex-direction: column;
     align-items: center;
 }
-textarea{
-    width: 15rem;
-    margin: 1rem 1rem;
+textarea, textarea:focus {
+    width: 20rem;
+    margin: 0rem 0rem;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 1rem;
+    outline: none !important;
 }
+.input-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    padding: 2rem 0rem;
+}
+.addtaskbutton{
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    background: transparent;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    box-shadow: 2px 2px 4px #000000;
+}
+.tablerow{
+    padding: 1rem 1rem 0rem ;
 
+}
+.tabledata{
+    font-size: large;
+    padding: 1rem 1rem 0rem 0rem;
+    /* font-weight: bold; */
+}
+.tasklist-data{
+    width: 25rem;
+}
+.deletebutton{
+    background: transparent;
+    border: 0;
+}
